@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home • Three-Page Site</title>
+  <meta name="description" content="Simple three-page static site for GitHub Pages." />
+  <style>
+:root { --max: 900px; --pad: 1rem; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.6; background: #0f172a; color: #e5e7eb; }
+a { color: #93c5fd; text-decoration: none; }
+a:hover { text-decoration: underline; }
+header { background: #111827; border-bottom: 1px solid #1f2937; position: sticky; top: 0; z-index: 10; }
+.nav { max-width: var(--max); margin: 0 auto; display: flex; gap: 1rem; align-items: center; padding: .75rem var(--pad); }
+.brand { font-weight: 700; letter-spacing: .5px; color: #f9fafb; }
+.spacer { flex: 1; }
+.nav a[aria-current="page"] { color: #fbbf24; font-weight: 700; }
+main { max-width: var(--max); margin: 0 auto; padding: 2rem var(--pad); }
+h1, h2 { line-height: 1.2; color: #f3f4f6; }
+.card { background: #0b1220; border: 1px solid #1f2937; border-radius: .75rem; padding: 1rem; margin: 1rem 0; }
+footer { max-width: var(--max); margin: 2rem auto; padding: 1rem var(--pad); border-top: 1px solid #1f2937; color: #9ca3af; }
+ul.inline { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 1rem; padding: 0; list-style: none; }
+.button { display: inline-block; background: #1f2937; padding: .6rem .9rem; border-radius: .5rem; border: 1px solid #374151; }
+</style>
+</head>
+<body>
+  <header>
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html">EchoSite</a>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="coffee.html" >Arabian Coffee</a>
+      <a href="dss.html" >Decision Support Systems</a>
+      <span class="spacer"></span>
+      <a class="button" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+  <main>
+
+  <h1>Welcome to EchoSite</h1>
+  <p>This is a minimal three-page website you can deploy on GitHub Pages. Each page links to the others.</p>
+
+  <div class="card">
+    <h2>Explore the topics</h2>
+    <ul class="inline">
+      <li class="card">
+        <h3><a href="coffee.html">Arabian Coffee</a></h3>
+        <p>A quick dive into the heritage, roasting styles, and serving traditions of qahwa.</p>
+        <p><a class="button" href="coffee.html">Read more →</a></p>
+      </li>
+      <li class="card">
+        <h3><a href="dss.html">Decision Support Systems (DSS)</a></h3>
+        <p>How data, models, and interfaces work together to support smarter decisions.</p>
+        <p><a class="button" href="dss.html">Learn more →</a></p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>How to use</h2>
+    <ol>
+      <li>Upload <strong>all three</strong> files to a GitHub repository.</li>
+      <li>Enable <em>GitHub Pages</em> in your repo settings (deploy from the <code>main</code> branch / <code>/</code> root).</li>
+      <li>Open your GitHub Pages link — done!</li>
+    </ol>
+  </div>
+
+  </main>
+  <footer>© 2025 EchoSite — Static demo for GitHub Pages.</footer>
+</body>
+</html>
